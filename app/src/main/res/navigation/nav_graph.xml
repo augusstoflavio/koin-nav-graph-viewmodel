@@ -14,22 +14,5 @@
             android:id="@+id/action_homeFragment_to_formPage1Fragment"
             app:destination="@id/nav_form" />
     </fragment>
-
-    <navigation android:id="@+id/nav_form"
-        app:startDestination="@id/formPage1Fragment">
-        <fragment
-            android:id="@+id/formPage1Fragment"
-            android:name="com.example.myapplication.FormPage1Fragment"
-            android:label="FormPage1Fragment"
-            tools:layout="@layout/fragment_form_page_1">
-            <action
-                android:id="@+id/action_formPage1Fragment_to_formPage2Fragment"
-                app:destination="@id/formPage2Fragment" />
-        </fragment>
-        <fragment
-            android:id="@+id/formPage2Fragment"
-            android:name="com.example.myapplication.FormPage2Fragment"
-            android:label="FormPage2Fragment"
-            tools:layout="@layout/fragment_form_page_2" />
-    </navigation>
+    <include app:graph="@navigation/nav_graph_form" />
 </navigation>
